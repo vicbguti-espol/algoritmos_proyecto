@@ -32,4 +32,4 @@ def edit_distance(X, Y, m, n):
                     dp[i][j - 1] + 1,      
                     dp[i - 1][j - 1] + 1   
                 )
-    return dp[m][n]
+    return dp[m][n], dp

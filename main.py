@@ -8,8 +8,8 @@ def main():
         X = input("Enter string X: ")
         Y = input("Enter string Y: ")
         m, n = len(X), len(Y)
-        distance = edit_distance(X, Y, m, n)
-        operations = recover_operations(X, Y, m, n, None)
+        distance, dp = edit_distance(X, Y, m, n)
+        operations = recover_operations(X, Y, m, n, dp)
         print(f"Minimum edit distance between '{X}' and '{Y}' is: {distance}")
         print("Operations:")
         for op in operations:
